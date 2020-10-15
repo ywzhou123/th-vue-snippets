@@ -1,0 +1,208 @@
+{
+    "icon": {
+        "prefix": "th-icon",
+        "body": [
+            "<th-icon icon=\"$1\" />"
+        ],
+        "description": "图标组件"
+    },
+    "link": {
+        "prefix": "th-link",
+        "body": [
+            "<th-link @click=\"handleClick\">$0</th-link>"
+        ],
+        "description": "链接组件"
+    },
+    "select": {
+        "prefix": "th-select",
+        "body": [
+            "<th-select",
+            "\tv-model=\"$1\"",
+            "\tv-bind=\"$2\"",
+            "\t@change=\"handleChange\"",
+            "/>"
+        ],
+        "description": "下拉选择组件"
+    },
+    "input-tree": {
+        "prefix": "th-input-tree",
+        "body": [
+            "<th-input-tree",
+            "\tv-model=\"$1\"",
+            "\tv-bind=\"$2\"",
+            "\t@change=\"handleChange\"",
+            "/>"
+        ],
+        "description": "下拉树组件"
+    },
+    "title": {
+        "prefix": "th-title",
+        "body": [
+            "<th-form-title title=\"$1\"/>"
+        ],
+        "description": "标题组件"
+    },
+    "form": {
+        "prefix": "th-form",
+        "body": [
+            "<th-form",
+            "\tv-bind=\"form\"",
+            "\t@handleSubmit=\"handleSubmit\"",
+            "/>"
+        ],
+        "description": "表单组件"
+    },
+    "pagination": {
+        "prefix": "th-pagination",
+        "body": [
+            "<th-pagination",
+            "\tv-bind=\"paginationProps\"",
+            "\t@size-change=\"handleSizeChange\"",
+            "\t@current-change=\"handleCurrentChange\"",
+            "/>"
+        ],
+        "description": "分页组件"
+    },
+    "table": {
+        "prefix": "th-table",
+        "body": [
+            "<th-table",
+            "\tv-bind=\"list\"",
+            "\t@handleSizeChange=\"handleSizeChange\"",
+            "\t@handleCurrentChange=\"handleCurrentChange\"",
+            "/>"
+        ],
+        "description": "分页组件"
+    },
+    "slot": {
+        "prefix": "th-slot",
+        "body": [
+            "<template #${1}=\"scope\"",
+            "\t<div>",
+            "\t\t$0",
+            "\t</div>",
+            "</template>"
+        ],
+        "description": "插槽"
+    },
+    "search": {
+        "prefix": "th-search",
+        "body": [
+            "<th-search",
+            "\t:form=\"form\"",
+            "\t:list=\"list\"",
+            "\t@handleSizeChange=\"handleSizeChange\"",
+            "\t@handleCurrentChange=\"handleCurrentChange\"",
+            "\t@handleSubmit=\"handleSubmit\"",
+            "/>"
+        ],
+        "description": "搜索组件"
+    },
+    "dialog": {
+        "prefix": "th-dialog",
+        "body": [
+            "<th-dialog",
+            "\tv-bind=\"dialogProps\"",
+            "\t@handleConfirm=\"handleConfirm\"",
+            ">",
+            "\t<div class=\"dialog-content\">",
+            "\t\t$0",
+            "\t</div>",
+            "</th-dialog>"
+        ],
+        "description": "弹框组件"
+    },
+    "tabs": {
+        "prefix": "th-tabs",
+        "body": [
+            "<th-tabs",
+            "\tv-model=\"activeTab\"",
+            "\t:tabs=\"tabs\"",
+            "\t@click=\"handleClickTab\"",
+            "/>"
+        ],
+        "description": "标签页组件"
+    },
+    "dialog-tabs": {
+        "prefix": "th-dialog-tabs",
+        "body": [
+            "<th-dialog",
+            "\tv-bind=\"dialogProps\"",
+            "\t@handleConfirm=\"handleConfirm\"",
+            ">",
+            "\t<div class=\"dialog-content\" style=\"padding: 0 20px;\">",
+            "\t\t<th-tabs",
+            "\t\t\tv-model=\"activeTab\"",
+            "\t\t\tv-bind=\"tabsProps\"",
+            "\t\t/>",
+            "\t</div>",
+            "</th-dialog>"
+        ],
+        "description": "弹框标签页组件"
+    },
+    "dropdown": {
+        "prefix": "th-dropdown",
+        "body": [
+            "<th-dropdown",
+            "\tv-bind=\"timelineProps\"",
+            "\t@handleCommand=\"handleCommand\"",
+            "/>"
+        ],
+        "description": "下拉菜单组件"
+    },
+    "timeline": {
+        "prefix": "th-timeline",
+        "body": [
+            "<th-timeline",
+            "\tv-bind=\"timelineProps\"",
+            "\t@click=\"handleClickTimeline\"",
+            "/>"
+        ],
+        "description": "时间线组件"
+    },
+    "tooltip": {
+        "prefix": "th-tooltip",
+        "body": [
+            "<th-tooltip",
+            "\t:value=\"content\"",
+            "\t:rows=\"2\"",
+            "/>"
+        ],
+        "description": "省略提示组件"
+    },
+    "import": {
+        "prefix": "th-import-excel",
+        "body": [
+            "<th-import-excel @change=\"handleChange\"/>"
+        ],
+        "description": "导入表格组件"
+    },
+    "export": {
+        "prefix": "th-export-excel",
+        "body": [
+             "<th-export-excel",
+            "\tv-bind=\"exportProps\"",
+            "\t:data=\"exportData\"",
+            "\t:columns=\"list.columns.map(d => d.prop)\"",
+            "\t:captions=\"list.columns.map(d => d.label)\"",
+            "\t@exportExcelAll=\"exportExcelAll\"",
+            "/>"
+        ],
+        "description": "导出表格组件"
+    },
+
+    "v-drag": {
+        "prefix": "vDrag",
+        "body": [
+            "v-drag=\"{ dragEl: $1, dragDom: $2 }\""
+        ],
+        "description": "拖拽指令"
+    },
+    "v-clickoutside": {
+        "prefix": "vClickoutside",
+        "body": [
+            "v-clickoutside=\"${1:handleClick}\""
+        ],
+        "description": "点击元素外部指令"
+    }
+}

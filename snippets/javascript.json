@@ -1,0 +1,667 @@
+{
+    "m-table": {
+        "prefix": "m-table",
+        "body": [
+            "import baseTable from '@@/mixins/baseTable'"
+        ],
+        "description": "表格mixin"
+    },
+    "m-form": {
+        "prefix": "m-form",
+        "body": [
+            "import baseForm from '@@/mixins/baseForm'"
+        ],
+        "description": "表单mixin"
+    },
+    "m-search": {
+        "prefix": "m-search",
+        "body": [
+            "import search from '@@/mixins/search'"
+        ],
+        "description": "搜索mixin"
+    },
+    "m-export": {
+        "prefix": "m-export",
+        "body": [
+            "import baseExport from '@@/mixins/baseExport'"
+        ],
+        "description": "导出表格mixin"
+    },
+    "m-screenfull": {
+        "prefix": "m-screenfull",
+        "body": [
+            "import screenFull from '@@/mixins/screenFull'"
+        ],
+        "description": "全屏mixin"
+    },
+    "m-color": {
+        "prefix": "m-color",
+        "body": [
+            "import color from '@@/mixins/color'"
+        ],
+        "description": "主题mixin"
+    },
+
+
+
+
+
+    "u-deepClone": {
+        "prefix": "u-deepClone",
+        "body": [
+            "this.\\$util.deepClone($1)"
+        ],
+        "description": "深度复制"
+    },
+    "u-serialize": {
+        "prefix": "u-serialize",
+        "body": [
+            "this.\\$util.serialize($1)"
+        ],
+        "description": "序列化"
+    },
+    "u-length": {
+        "prefix": "u-length",
+        "body": [
+            "this.\\$length($1)"
+        ],
+        "description": "判断数组长度"
+    },
+    "u-copy": {
+        "prefix": "u-copy",
+        "body": [
+            "this.\\$util.copy(${1:selectSelector}, ${2:targetSelector})"
+        ],
+        "description": "复制内容"
+    },
+    "u-download": {
+        "prefix": "u-download",
+        "body": [
+            "this.\\$util.download(${1:blob}, ${2:filename})"
+        ],
+        "description": "下载文件"
+    },
+    "u-validatenull": {
+        "prefix": "u-validatenull",
+        "body": [
+            "this.\\$util.validatenull($1)"
+        ],
+        "description": "判断是否为空"
+    },
+    "u-detailDataType": {
+        "prefix": "u-detailDataType",
+        "body": [
+            "this.\\$util.detailDataType($1, ${2:'number'})"
+        ],
+        "description": "字符串数据类型转化"
+    },
+    "u-calcDescartes": {
+        "prefix": "u-calcDescartes",
+        "body": [
+            "this.\\$util.calcDescartes($1)"
+        ],
+        "description": "迪卡尔积"
+    },
+    "u-getObjType": {
+        "prefix": "u-getObjType",
+        "body": [
+            "this.\\$util.getObjType($1)"
+        ],
+        "description": "判断数据类型"
+    },
+    "u-diff": {
+        "prefix": "u-diff",
+        "body": [
+            "this.\\$util.diff($1, $2)"
+        ],
+        "description": "判断路由是否相等"
+    },
+    "u-encryption": {
+        "prefix": "u-encryption",
+        "body": [
+            "this.\\$util.encryption($1)"
+        ],
+        "description": "AES加密处理"
+    },
+    "u-desEncrypt": {
+        "prefix": "u-desEncrypt",
+        "body": [
+            "this.\\$util.desEncrypt($1)"
+        ],
+        "description": "3DES加密"
+    },
+    "u-desDecrypt": {
+        "prefix": "u-desDecrypt",
+        "body": [
+            "this.\\$util.desDecrypt($1)"
+        ],
+        "description": "3DES解密"
+    },
+    "u-randomLenNum": {
+        "prefix": "u-randomNum",
+        "body": [
+            "this.\\$util.randomLenNum(${1:32}, ${2:false})"
+        ],
+        "description": "生成随机len位数字"
+    },
+    "u-randomWord": {
+        "prefix": "u-randomWord",
+        "body": [
+            "this.\\$util.randomWord(${1:true}, ${2:8}, ${3:32})"
+        ],
+        "description": "生成随机len位字母数字"
+    },
+    "u-getLeaveTime": {
+        "prefix": "u-getLeaveTime",
+        "body": [
+            "this.\\$util.getLeaveTime($1)"
+        ],
+        "description": "获取剩余时间"
+    },
+    "u-loopOptions": {
+        "prefix": "u-loopOptions",
+        "body": [
+            "this.\\$util.loopOptions($1)"
+        ],
+        "description": "转换级联下拉数据"
+    },
+    "u-getTreeIds": {
+        "prefix": "u-getTreeIds",
+        "body": [
+            "this.\\$util.getTreeIds(${1:tree}, ${2:id})"
+        ],
+        "description": "通过Id获取级联数据id数组"
+    },
+    "u-multiplication": {
+        "prefix": "u-multiplication",
+        "body": [
+            "this.\\$util.multiplication($1, $2)"
+        ],
+        "description": "乘法"
+    },
+    "u-addition": {
+        "prefix": "u-addition",
+        "body": [
+            "this.\\$util.addition($1, $2)"
+        ],
+        "description": "加法"
+    },
+    "u-runTime": {
+        "prefix": "u-runTime",
+        "body": [
+            "this.\\$util.runTime($1)"
+        ],
+        "description": "持续时长 (秒)"
+    },
+    "u-addArrayToAnother": {
+        "prefix": "u-addArrayToAnother",
+        "body": [
+            "this.\\$util.addArrayToAnother($1, $2)"
+        ],
+        "description": "往数组里加入元素"
+    },
+    "u-delArrayFromAnother": {
+        "prefix": "u-delArrayFromAnother",
+        "body": [
+            "this.\\$util.delArrayFromAnother($1)"
+        ],
+        "description": "往数组里删除元素"
+    },
+    "u-getImgToBase64": {
+        "prefix": "u-getImgToBase64",
+        "body": [
+            "this.\\$util.getImgToBase64(${1:url}, ${2:callback})"
+        ],
+        "description": "将图片转换为Base64"
+    },
+    "u-colorHex": {
+        "prefix": "u-colorHex",
+        "body": [
+            "this.\\$util.colorHex($1)"
+        ],
+        "description": "颜色转换"
+    },
+    "u-colorRgb": {
+        "prefix": "u-colorRgb",
+        "body": [
+            "this.\\$util.colorRgb($1)"
+        ],
+        "description": "颜色转换"
+    },
+    "u-colorRgba": {
+        "prefix": "u-colorRgba",
+        "body": [
+            "this.\\$util.colorRgba($1)"
+        ],
+        "description": "颜色转换"
+    },
+    "u-destroyIframe": {
+        "prefix": "u-destroyIframe",
+        "body": [
+            "this.\\$util.destroyIframe(${1:iframeEl})"
+        ],
+        "description": "释放iframe内存"
+    },
+    "u-getQueryString": {
+        "prefix": "u-getQueryString",
+        "body": [
+            "this.\\$util.getQueryString(${1:url}, ${2:name})"
+        ],
+        "description": "查询请求参数"
+    },
+
+
+
+
+    "s-getStore": {
+        "prefix": "s-getStore",
+        "body": [
+            "this.\\$localStore.getStore({ name: $1 })"
+        ],
+        "description": "获取存储数据"
+    },
+    "s-setStore": {
+        "prefix": "s-setStore",
+        "body": [
+            "this.\\$localStore.setStore({ name: $1, content: $2 })"
+        ],
+        "description": "设置存储数据"
+    },
+    "s-removeStore": {
+        "prefix": "s-removeStore",
+        "body": [
+            "this.\\$localStore.removeStore({ name: $1 })"
+        ],
+        "description": "删除存储数据"
+    },
+    "s-getAllStore": {
+        "prefix": "s-getAllStore",
+        "body": [
+            "this.\\$localStore.getAllStore()"
+        ],
+        "description": "获取所有存储数据"
+    },
+
+
+
+
+
+    "r-validator": {
+        "prefix": "r-validator",
+        "body": [
+            "{",
+            "\tvalidator: (rule, value, callback) => {",
+            "\t\tif(value) {",
+            "\t\t\tcallback()",
+            "\t\t}",
+            "\t\tcallback(new Error('验证失败'))",
+            "\t},",
+            "\ttrigger: ['blur', 'change']",
+            "}"
+        ],
+        "description": "自定义验证"
+    },
+    "r-required": {
+        "prefix": "r-required",
+        "body": [
+            "this.\\$rules.required()"
+        ],
+        "description": "必填"
+    },
+    "r-requiredManual": {
+        "prefix": "r-requiredManual",
+        "body": [
+            "this.\\$rules.requiredManual()"
+        ],
+        "description": "必填"
+    },
+    "r-requiredArray": {
+        "prefix": "r-requiredArray",
+        "body": [
+            "this.\\$rules.requiredArray()"
+        ],
+        "description": "必填"
+    },
+    "r-requiredObject": {
+        "prefix": "r-requiredObject",
+        "body": [
+            "this.\\$rules.requiredObject()"
+        ],
+        "description": "必填"
+    },
+    "r-length": {
+        "prefix": "r-length",
+        "body": [
+            "this.\\$rules.\\$length($1)"
+        ],
+        "description": "固定长度"
+    },
+    "r-len": {
+        "prefix": "r-len",
+        "body": [
+            "this.\\$rules.len($1, $2)"
+        ],
+        "description": "长度范围"
+    },
+    "r-min": {
+        "prefix": "r-min",
+        "body": [
+            "this.\\$rules.min($1)"
+        ],
+        "description": "最小长度"
+    },
+    "r-max": {
+        "prefix": "r-max",
+        "body": [
+            "this.\\$rules.max($1)"
+        ],
+        "description": "最大长度"
+    },
+    "r-minNum": {
+        "prefix": "r-minNum",
+        "body": [
+            "this.\\$rules.minNum($1)"
+        ],
+        "description": "最小数"
+    },
+    "r-maxNum": {
+        "prefix": "r-maxNum",
+        "body": [
+            "this.\\$rules.maxNum($1)"
+        ],
+        "description": "最大数"
+    },
+    "r-rangeNum": {
+        "prefix": "r-rangeNum",
+        "body": [
+            "this.\\$rules.rangeNum()"
+        ],
+        "description": "数值范围"
+    },
+    "r-type": {
+        "prefix": "r-type",
+        "body": [
+            "this.\\$rules.required($1)"
+        ],
+        "description": "类型"
+    },
+    "r-email": {
+        "prefix": "r-email",
+        "body": [
+            "this.\\$rules.email()"
+        ],
+        "description": "邮箱"
+    },
+    "r-upperCase": {
+        "prefix": "r-upperCase",
+        "body": [
+            "this.\\$rules.upperCase()"
+        ],
+        "description": "大写字母"
+    },
+    "r-lowerCase": {
+        "prefix": "r-lowerCase",
+        "body": [
+            "this.\\$rules.lowerCase()"
+        ],
+        "description": "小写字母"
+    },
+    "r-english": {
+        "prefix": "r-english",
+        "body": [
+            "this.\\$rules.english()"
+        ],
+        "description": "大小写字母"
+    },
+    "r-chinese": {
+        "prefix": "r-chinese",
+        "body": [
+            "this.\\$rules.chinese()"
+        ],
+        "description": "只能输中文"
+    },
+    "r-noChinese": {
+        "prefix": "r-noChinese",
+        "body": [
+            "this.\\$rules.noChinese()"
+        ],
+        "description": "不能输中文"
+    },
+    "r-cnEnNum": {
+        "prefix": "r-cnEnNum",
+        "body": [
+            "this.\\$rules.cnEnNum()"
+        ],
+        "description": "中文英文数字"
+    },
+    "r-specialChar": {
+        "prefix": "r-specialChar",
+        "body": [
+            "this.\\$rules.specialChar()"
+        ],
+        "description": "不能包含特殊字符"
+    },
+    "r-path": {
+        "prefix": "r-path",
+        "body": [
+            "this.\\$rules.path()"
+        ],
+        "description": "路径"
+    },
+    "r-enNumLine": {
+        "prefix": "r-enNumLine",
+        "body": [
+            "this.\\$rules.enNumLine()"
+        ],
+        "description": "英文数字下划线"
+    },
+    "r-denyNum": {
+        "prefix": "r-denyNum",
+        "body": [
+            "this.\\$rules.denyNum()"
+        ],
+        "description": "不能全是数字"
+    },
+    "r-enNum": {
+        "prefix": "r-type",
+        "body": [
+            "this.\\$rules.required()"
+        ],
+        "description": "英文数字"
+    },
+    "r-haveCnEnNum": {
+        "prefix": "r-haveCnEnNum",
+        "body": [
+            "this.\\$rules.haveCnEnNum()"
+        ],
+        "description": "必须包含英文数字"
+    },
+    "r-mobile": {
+        "prefix": "r-mobile",
+        "body": [
+            "this.\\$rules.mobile()"
+        ],
+        "description": "手机号"
+    },
+    "r-phone": {
+        "prefix": "r-phone",
+        "body": [
+            "this.\\$rules.phone()"
+        ],
+        "description": "座机"
+    },
+    "r-phone2": {
+        "prefix": "r-phone2",
+        "body": [
+            "this.\\$rules.phone2()"
+        ],
+        "description": "座机(区号-座机号-分机号)"
+    },
+    "r-phoneAll": {
+        "prefix": "r-phoneAll",
+        "body": [
+            "this.\\$rules.phoneAll()"
+        ],
+        "description": "手机或座机"
+    },
+    "r-float": {
+        "prefix": "r-float",
+        "body": [
+            "this.\\$rules.float()"
+        ],
+        "description": "小数"
+    },
+    "r-decimal": {
+        "prefix": "r-decimal",
+        "body": [
+            "this.\\$rules.decimal()"
+        ],
+        "description": "两位小数"
+    },
+    "r-number": {
+        "prefix": "r-number",
+        "body": [
+            "this.\\$rules.number()"
+        ],
+        "description": "整数"
+    },
+    "r-allNumber": {
+        "prefix": "r-allNumber",
+        "body": [
+            "this.\\$rules.allNumber()"
+        ],
+        "description": "正负整数"
+    },
+    "r-plusNumber": {
+        "prefix": "r-plusNumber",
+        "body": [
+            "this.\\$rules.plusNumber()"
+        ],
+        "description": "正数"
+    },
+    "r-url": {
+        "prefix": "r-url",
+        "body": [
+            "this.\\$rules.url()"
+        ],
+        "description": "网址"
+    },
+    "r-ip": {
+        "prefix": "r-ip",
+        "body": [
+            "this.\\$rules.ip()"
+        ],
+        "description": "ip地址"
+    },
+    "r-identity": {
+        "prefix": "r-identity",
+        "body": [
+            "this.\\$rules.identity()"
+        ],
+        "description": "身份证号"
+    },
+    "r-postal": {
+        "prefix": "r-postal",
+        "body": [
+            "this.\\$rules.postal()"
+        ],
+        "description": "邮政编码"
+    },
+    "r-domain": {
+        "prefix": "r-domain",
+        "body": [
+            "this.\\$rules.domain()"
+        ],
+        "description": "域名协议"
+    },
+
+
+
+    "h-get": {
+        "prefix": "h-get",
+        "body": [
+            "fetch$1: data => axios.get('$2', data)"
+        ],
+        "description": "get请求"
+    },
+    "h-post": {
+        "prefix": "h-post",
+        "body": [
+            "fetch$1: data => axios.post('$2', data)"
+        ],
+        "description": "post请求"
+    },
+    "h-download": {
+        "prefix": "h-download",
+        "body": [
+            "fetch$1: data => axios.download('$2', data)"
+        ],
+        "description": "download请求"
+    },
+    "h-upload": {
+        "prefix": "h-upload",
+        "body": [
+            "fetch$1: data => axios.upload('$2', data)"
+        ],
+        "description": "upload请求"
+    },
+
+
+
+    "x-init": {
+        "prefix": "x-init",
+        "body": [
+            "export default {",
+            "\tnamespaced: true,",
+            "\tstate: {",
+            "\t\t$1",
+            "\t},",
+            "\tmutations: {",
+            "\t\t$2",
+            "\t},",
+            "\tactions: {",
+            "\t\t$3",
+            "\t},",
+            "\tgetters: {",
+            "\t\t$4",
+            "\t}"
+        ],
+        "description": "vuex 模板"
+    },
+    "x-mutation": {
+        "prefix": "x-mutation",
+        "body": [
+            "SET_$1(state, data) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "vuex mutation"
+    },
+    "x-action": {
+        "prefix": "x-action",
+        "body": [
+            "$1({ commit, dispatch }, data) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "vuex action"
+    },
+    "x-getter": {
+        "prefix": "x-getter",
+        "body": [
+            "$1: state => state.$0"
+        ],
+        "description": "vuex getter"
+    },
+    "x-getter-function": {
+        "prefix": "x-getter-function",
+        "body": [
+            "$1: (state, getters) => (params) => {",
+            "\t$0",
+            "}"
+        ],
+        "description": "vuex getter function"
+    }
+
+
+}
