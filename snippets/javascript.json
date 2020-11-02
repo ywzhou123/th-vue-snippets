@@ -1,4 +1,183 @@
-{
+{   
+    "d-list": {
+        "prefix": "d-list",
+        "body": [
+            "list: {",
+            "\tref: 'table',",
+            "\tloading: false,",
+            "\tapi: '',",
+            "\tparams: {},",
+            "\tdata: [],",
+            "\tcolumns: [",
+            "\t\t$0",
+            "\t], // prop,label,component",
+            "\tpageNo: 1,",
+            "\tpageSize: 20,",
+            "\ttotalCount: 0,",
+            "\tselectedKeys: [],",
+            "\tselectedRows: [],",
+            "\tshowIndex: false,",
+            "\tshowSelection: false,",
+            "\tprops: {},",
+            "\tpageProps: {},",
+            "\ttreeProps: {},",
+            "\thandleColumn: [], // key,label,disabled,isDisabled,props",
+            "\thandleColumnProps: {}, // label,width,icon,fixed",
+            "\tfilterParams: [],",
+            "\tcurrentRow: null,",
+            "\tisSerialize: true",
+            "}"
+        ],
+        "description": "表格数据"
+    },
+    "d-form": {
+        "prefix": "d-form",
+        "body": [
+            "form: {",
+            "\tref: 'form',",
+            "\tloading: false,",
+            "\tdata: {",
+            "\t\t$0",
+            "\t},",
+            "\titems: [], // prop,label,component,props",
+            "\trules: {},",
+            "\tbuttons: [] // key,label",
+            "}"
+        ],
+        "description": "表单数据"
+    },
+    "d-dialog": {
+        "prefix": "d-dialog",
+        "body": [
+            "dialogProps: {",
+            "\tref: 'dialog',",
+            "\tloading: false,",
+            "\ttitle: '$0',",
+            "\twidth: '80%',",
+            "\theight: '80vh',",
+            "\tbuttons: [], // key,label",
+            "\tshowCancelButton: true,",
+            "\tisDisabledDrag: false,",
+            "\tisDisabledFullScreen: false,",
+            "\tprops: {}",
+            "}"
+        ],
+        "description": "弹框数据"
+    },
+    "d-export": {
+        "prefix": "d-export",
+        "body": [
+            "exportProps() {",
+            "\treturn {",
+            "\t\tref: 'exportDialog',",
+            "\t\tplaceholder: '$1',",
+            "\t\twidth: 20,",
+            "\t\theadHeight: 30,",
+            "\t\trowHeight: 50,",
+            "\t\theaderCellStyle: {},",
+            "\t\tcellStyle: {},",
+            "\t\tstriped: true,",
+            "\t\tstripedColor: 'FAFAFA',",
+            "\t\tdata: this.getExportData(this.list.data),",
+            "\t\tcaptions: this.list.columns.map(d => d.label),",
+            "\t}",
+            "}"
+        ],
+        "description": "导出数据"
+    },
+    "d-pagination": {
+        "prefix": "d-pagination",
+        "body": [
+            "paginationProps: {",
+            "\tref: 'pagination',",
+            "\tpage: 1,",
+            "\tpageSize: 20,",
+            "\ttotal: 0,",
+            "\tlayout: 'slot, ->, total, sizes, prev, pager, next, jumper',",
+            "\tpagerCount: 5,",
+            "\tpageSizes: [10, 20, 30, 40, 50, 100],",
+            "\thideOnSinglePage: false,",
+            "\tpopperClass: 'th-pagination__popper',",
+            "\tdisabled: false",
+            "}"
+        ],
+        "description": "分页数据"
+    },
+    "d-tabs": {
+        "prefix": "d-tabs",
+        "body": [
+            "tabsProps: {",
+            "\ttype: 'card', // '',card,border-card",
+            "\tcustom: false,",
+            "\tpaneStyle: 'height: 100%',",
+            "\ttabs: [",
+            "\t\t{",
+            "\t\t\tlabel: '${1:标签名称}',",
+            "\t\t\tname: '${2:key01}',",
+            "\t\t\tcomponent: ${0: SomeComponent},",
+            "\t\t\tpaneProps: {},",
+            "\t\t\thidden: false",
+            "\t\t}",
+            "\t]",
+            "}"
+        ],
+        "description": "标签页数据"
+    },
+
+
+
+
+
+    "el-message-info": {
+        "prefix": "el-message-info",
+        "body": [
+            "this.\\$message.info('$0')"
+        ],
+        "description": "el普通消息"
+    },
+    "el-message-succcess": {
+        "prefix": "el-message-succcess",
+        "body": [
+            "this.\\$message.succcess('$0')"
+        ],
+        "description": "el成功消息"
+    },
+    "el-message-warning": {
+        "prefix": "el-message-warning",
+        "body": [
+            "this.\\$message.warning('$0')"
+        ],
+        "description": "el告警消息"
+    },
+    "el-message-error": {
+        "prefix": "el-message-error",
+        "body": [
+            "this.\\$message.error('$0')"
+        ],
+        "description": "el错误消息"
+    },
+    "el-confirm": {
+        "prefix": "el-confirm",
+        "body": [
+            "this.\\$confirm('$1', '${2:提示}', { type: '${3:warning|success|info}' }).then(() => {",
+            "\t$0",
+            "})"
+        ],
+        "description": "el确认提示"
+    },
+    "el-notify": {
+        "prefix": "el-notify",
+        "body": [
+            "this.\\$notify({",
+            "\ttitle: '$1",
+            "\tmessage: '$2",
+            "\ttype: ${0:success|warning|info|error}",
+            "})"
+        ],
+        "description": "el消息通知"
+    },
+
+
     "m-table": {
         "prefix": "m-table",
         "body": [
@@ -23,7 +202,7 @@
     "m-export": {
         "prefix": "m-export",
         "body": [
-            "import baseExport from '@@/mixins/baseExport'"
+            "import baseExportExcel from '@@/mixins/baseExportExcel'"
         ],
         "description": "导出表格mixin"
     },
@@ -45,7 +224,27 @@
 
 
 
-
+    "u-moment": {
+        "prefix": "u-moment",
+        "body": [
+            "this.\\$moment($1).format('YYYY-MM-DD HH:mm:ss')"
+        ],
+        "description": "日期"
+    },
+    "u-moment-add": {
+        "prefix": "u-moment-add",
+        "body": [
+            "this.\\$moment($1).add($2, '${3:m|d|y|s}').format('YYYY-MM-DD HH:mm:ss')"
+        ],
+        "description": "之后日期"
+    },
+    "u-moment-subtract": {
+        "prefix": "u-moment-subtract",
+        "body": [
+            "this.\\$moment($1).subtract($2, '${3:months|d|y|s}').format('YYYY-MM-DD HH:mm:ss')"
+        ],
+        "description": "之前日期"
+    },
     "u-deepClone": {
         "prefix": "u-deepClone",
         "body": [
@@ -313,49 +512,49 @@
         "body": [
             "this.\\$rules.requiredManual()"
         ],
-        "description": "必填"
+        "description": "手动必填"
     },
     "r-requiredArray": {
         "prefix": "r-requiredArray",
         "body": [
             "this.\\$rules.requiredArray()"
         ],
-        "description": "必填"
+        "description": "数组必填"
     },
     "r-requiredObject": {
         "prefix": "r-requiredObject",
         "body": [
             "this.\\$rules.requiredObject()"
         ],
-        "description": "必填"
+        "description": "对象必填"
     },
     "r-length": {
         "prefix": "r-length",
         "body": [
             "this.\\$rules.\\$length($1)"
         ],
-        "description": "固定长度"
+        "description": "字符串固定长度"
     },
     "r-len": {
         "prefix": "r-len",
         "body": [
             "this.\\$rules.len($1, $2)"
         ],
-        "description": "长度范围"
+        "description": "字符串长度范围"
     },
     "r-min": {
         "prefix": "r-min",
         "body": [
             "this.\\$rules.min($1)"
         ],
-        "description": "最小长度"
+        "description": "字符串最小长度"
     },
     "r-max": {
         "prefix": "r-max",
         "body": [
             "this.\\$rules.max($1)"
         ],
-        "description": "最大长度"
+        "description": "字符串最大长度"
     },
     "r-minNum": {
         "prefix": "r-minNum",
@@ -604,6 +803,21 @@
             "fetch$1: data => axios.upload('$2', data)"
         ],
         "description": "upload请求"
+    },
+    "h-request": {
+        "prefix": "h-request",
+        "body": [
+            "this.\\$request.$1().then(res => {",
+            "\tif (res.data.code === 0) {",
+            "\t\t$0",
+            "\t}",
+            "}).catch(err => {",
+            "\t",
+            "}).finally(() => {",
+            "\t",
+            "})"
+        ],
+        "description": "request请求"
     },
 
 

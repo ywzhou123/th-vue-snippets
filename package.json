@@ -6,7 +6,7 @@
     "icon": "img/logo.png",
     "description": "A Tellhow Vue.js 2 Extension",
     "license": "MIT",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.5.0"
     },
@@ -18,7 +18,6 @@
         "vue 2"
     ],
     "categories": [
-        "Programming Languages",
         "Snippets"
     ],
     "repository": {
@@ -36,18 +35,11 @@
                 "extensions": [
                     ".vue"
                 ]
-            },
-            {
-                "id": "js",
-                "extensions": [
-                    ".js",
-                    ".ts"
-                ]
             }
         ],
         "snippets": [
             {
-                "language": "js",
+                "language": "javascriptreact",
                 "path": "./snippets/javascript.json"
             },
             {

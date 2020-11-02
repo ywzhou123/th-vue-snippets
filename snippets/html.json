@@ -1,19 +1,19 @@
 {
-    "icon": {
+    "th-icon": {
         "prefix": "th-icon",
         "body": [
             "<th-icon icon=\"$1\" />"
         ],
         "description": "图标组件"
     },
-    "link": {
+    "th-link": {
         "prefix": "th-link",
         "body": [
             "<th-link @click=\"handleClick\">$0</th-link>"
         ],
         "description": "链接组件"
     },
-    "select": {
+    "th-select": {
         "prefix": "th-select",
         "body": [
             "<th-select",
@@ -24,7 +24,7 @@
         ],
         "description": "下拉选择组件"
     },
-    "input-tree": {
+    "th-input-tree": {
         "prefix": "th-input-tree",
         "body": [
             "<th-input-tree",
@@ -35,14 +35,14 @@
         ],
         "description": "下拉树组件"
     },
-    "title": {
+    "th-title": {
         "prefix": "th-title",
         "body": [
-            "<th-form-title title=\"$1\"/>"
+            "<th-form-title title=\"$1\" />"
         ],
         "description": "标题组件"
     },
-    "form": {
+    "th-form": {
         "prefix": "th-form",
         "body": [
             "<th-form",
@@ -52,7 +52,7 @@
         ],
         "description": "表单组件"
     },
-    "pagination": {
+    "th-pagination": {
         "prefix": "th-pagination",
         "body": [
             "<th-pagination",
@@ -63,7 +63,7 @@
         ],
         "description": "分页组件"
     },
-    "table": {
+    "th-table": {
         "prefix": "th-table",
         "body": [
             "<th-table",
@@ -72,9 +72,9 @@
             "\t@handleCurrentChange=\"handleCurrentChange\"",
             "/>"
         ],
-        "description": "分页组件"
+        "description": "表格组件"
     },
-    "slot": {
+    "th-slot": {
         "prefix": "th-slot",
         "body": [
             "<template #${1}=\"scope\"",
@@ -85,7 +85,7 @@
         ],
         "description": "插槽"
     },
-    "search": {
+    "th-search": {
         "prefix": "th-search",
         "body": [
             "<th-search",
@@ -98,7 +98,7 @@
         ],
         "description": "搜索组件"
     },
-    "dialog": {
+    "th-dialog": {
         "prefix": "th-dialog",
         "body": [
             "<th-dialog",
@@ -112,7 +112,7 @@
         ],
         "description": "弹框组件"
     },
-    "tabs": {
+    "th-tabs": {
         "prefix": "th-tabs",
         "body": [
             "<th-tabs",
@@ -123,7 +123,7 @@
         ],
         "description": "标签页组件"
     },
-    "dialog-tabs": {
+    "th-dialog-tabs": {
         "prefix": "th-dialog-tabs",
         "body": [
             "<th-dialog",
@@ -140,7 +140,7 @@
         ],
         "description": "弹框标签页组件"
     },
-    "dropdown": {
+    "th-dropdown": {
         "prefix": "th-dropdown",
         "body": [
             "<th-dropdown",
@@ -150,7 +150,7 @@
         ],
         "description": "下拉菜单组件"
     },
-    "timeline": {
+    "th-timeline": {
         "prefix": "th-timeline",
         "body": [
             "<th-timeline",
@@ -160,7 +160,7 @@
         ],
         "description": "时间线组件"
     },
-    "tooltip": {
+    "th-tooltip": {
         "prefix": "th-tooltip",
         "body": [
             "<th-tooltip",
@@ -170,21 +170,18 @@
         ],
         "description": "省略提示组件"
     },
-    "import": {
+    "th-import-excel": {
         "prefix": "th-import-excel",
         "body": [
-            "<th-import-excel @change=\"handleChange\"/>"
+            "<th-import-excel @change=\"handleChange\" />"
         ],
         "description": "导入表格组件"
     },
-    "export": {
+    "th-export-excel": {
         "prefix": "th-export-excel",
         "body": [
              "<th-export-excel",
             "\tv-bind=\"exportProps\"",
-            "\t:data=\"exportData\"",
-            "\t:columns=\"list.columns.map(d => d.prop)\"",
-            "\t:captions=\"list.columns.map(d => d.label)\"",
             "\t@exportExcelAll=\"exportExcelAll\"",
             "/>"
         ],
@@ -192,17 +189,290 @@
     },
 
     "v-drag": {
-        "prefix": "vDrag",
+        "prefix": "v-drag",
         "body": [
             "v-drag=\"{ dragEl: $1, dragDom: $2 }\""
         ],
         "description": "拖拽指令"
     },
     "v-clickoutside": {
-        "prefix": "vClickoutside",
+        "prefix": "v-clickoutside",
         "body": [
             "v-clickoutside=\"${1:handleClick}\""
         ],
         "description": "点击元素外部指令"
+    },
+
+    "el-container": {
+        "prefix": "el-container",
+        "body": [
+            "<el-container>",
+            "\t<el-header height=\"auto\">",
+            "\t\t$1",
+            "\t</el-header>",
+            "\t<el-main>",
+            "\t\t$0",
+            "\t</el-main>",
+            "</el-container>"
+        ],
+        "description": "el上下布局容器"
+    },
+    "el-container-aside": {
+        "prefix": "el-container-aside",
+        "body": [
+            "<el-container>",
+            "\t<el-aside width=\"300px\">",
+            "\t\t$1",
+            "\t</el-aside>",
+            "\t<el-main>",
+            "\t\t$0",
+            "\t</el-main>",
+            "</el-container>"
+        ],
+        "description": "el左右布局容器"
+    },
+    "el-row": {
+        "prefix": "el-row",
+        "body": [
+            "<el-row :gutter=\"0\">",
+            "\t<el-col :span=\"${1:12}\">",
+            "\t\t$0",
+            "\t</el-col>",
+            "\t<el-col :span=\"${1:12}\">",
+            "\t\t",
+            "\t</el-col>",
+            "</el-row>"
+        ],
+        "description": "el行容器"
+    },
+    "el-col": {
+        "prefix": "el-row",
+        "body": [
+            "<el-col :span=\"$1\">",
+            "\t$0",
+            "</el-col>"
+        ],
+        "description": "el列容器"
+    },
+    "el-button": {
+        "prefix": "el-button",
+        "body": [
+            "<el-button v-model=\"$1\" type=\"${2:primary|success|info|warning|danger}\" size=\"${3:medium|small|mini}\">",
+            "\t$0",
+            "</el-button>"
+        ],
+        "description": "el按钮"
+    },
+    "el-link": {
+        "prefix": "el-link",
+        "body": [
+            "<el-link :underline=\"false\" type=\"${1:primary|success|info|warning|danger}\" @click=\"$2\">",
+            "\t$0",
+            "</el-link>"
+        ],
+        "description": "el链接"
+    },
+    "el-radio": {
+        "prefix": "el-radio",
+        "body": [
+            "<el-radio-group v-model=\"$1\">",
+            "\t<template v-for=\"(item, index) in ${2:options}\">",
+            "\t\t<el-radio :key=\"item.value\" :label=\"item.value\">{{ item.label }}</el-radio>",
+            "\t</template>",
+            "</el-radio-group>"
+        ],
+        "description": "el单选框组"
+    },
+    "el-checkbox": {
+        "prefix": "el-checkbox",
+        "body": [
+            "<el-checkbox-group v-model=\"$1\">",
+            "\t<template v-for=\"(item, index) in ${2:options}\">",
+            "\t\t<el-checkbox :key=\"item.value\" :label=\"item.value\">{{ item.label }}</el-checkbox>",
+            "\t</template>",
+            "</el-checkbox-group>"
+        ],
+        "description": "el多选框组"
+    },
+    "el-input": {
+        "prefix": "el-input",
+        "body": [
+            "<el-input v-model=\"$1\" size=\"${2:medium|small|mini}\" placeholder=\"请输入\" clearable />"
+        ],
+        "description": "el输入框"
+    },
+    "el-textarea": {
+        "prefix": "el-textarea",
+        "body": [
+            "<el-input v-model=\"$1\" :rows=\"3\" type=\"textarea\" placeholder=\"请输入\" clearable />"
+        ],
+        "description": "el多行输入框"
+    },
+    "el-number": {
+        "prefix": "el-number",
+        "body": [
+            "<el-input-number v-model=\"$1\" size=\"${2:small|large}\" :min=\"1\" :max=\"99\" />"
+        ],
+        "description": "el数字输入框"
+    },
+    "el-select": {
+        "prefix": "el-select",
+        "body": [
+            "<el-select v-model=\"$1\" clearable>",
+            "\t<template v-for=\"(item, index) in ${2:options}\">",
+            "\t\t<el-option",
+            "\t\t\t:key=\"item.value\"",
+            "\t\t\t:value=\"item.value\"",
+            "\t\t\t:label=\"item.label\"",
+            "\t\t/>", 
+            "\t</template>",
+            "</el-select>"
+        ],
+        "description": "el下拉选择"
+    },
+    "el-cascader": {
+        "prefix": "el-cascader",
+        "body": [
+            "<el-cascader",
+            "\tv-model=\"$1\"",
+            "\t:options=\"options\"",
+            "\tclearable",
+            "/>"
+        ],
+        "description": "el级联选择"
+    },
+    "el-switch": {
+        "prefix": "el-switch",
+        "body": [
+            "<el-switch",
+            "\tv-model=\"$1\"",
+            "\tactive-text=\"${2:打开}\"",
+            "\tinactive-text=\"${3:关闭}\"",
+            "\tactive-value=\"${4:1}\"",
+            "\tinactive-value=\"${5:0}\"",
+            "/>"
+        ],
+        "description": "el开关"
+    },
+    "el-time": {
+        "prefix": "el-time",
+        "body": [
+            "<el-time-select",
+            "\tv-model=\"$1\"",
+            "\tplaceholder=\"选择时间\"",
+            "\tclearable",
+            "/>"
+        ],
+        "description": "el时间选择"
+    },
+    "el-date": {
+        "prefix": "el-date",
+        "body": [
+            "<el-date-picker",
+            "\tv-model=\"$1\"",
+            "\ttype=\"${2:datetime|year|month|date|week|datetimerange|daterange}\"",
+            "valueFormat=\"yyyy-MM-dd HH:mm:ss\"",
+            "\tplaceholder=\"选择日期\"",
+            "\trangeSeparator=\"至\"",
+            "\tstartPlaceholder=\"开始日期\"",
+            "\tendPlaceholder=\"结束日期\"",
+            "\tclearable",
+            "/>"
+        ],
+        "description": "el日期选择"
+    },
+    "el-tree": {
+        "prefix": "el-tree",
+        "body": [
+            "<el-tree",
+            "\t:data=\"$1\"",
+            "\t:props=\"$2\"",
+            "\t@node-click=\"handleNodeClick\"",
+            "/>"
+        ],
+        "description": "el树选择"
+    },
+    "el-tabs": {
+        "prefix": "el-tabs",
+        "body": [
+            "<el-tabs v-model=\"$1\" @tab-click=\"handleClickTab\">",
+            "\t<template v-for=\"(item, index) in ${2:options}\">",
+            "\t\t<el-tab-pane",
+            "\t\t\t:key=\"item.name\"",
+            "\t\t\t:name=\"item.name\"",
+            "\t\t>", 
+            "\t\t\t$0", 
+            "\t\t</el-tab-pane>", 
+            "\t</template>",
+            "</el-tabs>"
+        ],
+        "description": "el标签页"
+    },
+    "el-dialog": {
+        "prefix": "el-dialog",
+        "body": [
+            "<el-dialog",
+            "\ttitle=\"${1:标题}\"",
+            "\t:visible.sync=\"visible\"",
+            "width=\"{$2:50%}\"",
+            "append-to-body",
+            ">",
+            "\t$0",
+            "</el-dialog>"
+        ],
+        "description": "el弹出框"
+    },
+    "el-tooltip": {
+        "prefix": "el-tooltip",
+        "body": [
+            "<el-tooltip",
+            "\t:content=\"$1\"",
+            "\teffect=\"${2:dark|light}\"",
+            "\tplacement=\"{$3:top|bottom|left|right}\"",
+            ">",
+            "\t$0",
+            "</el-tooltip>"
+        ],
+        "description": "el提示"
+    },
+    "el-popover": {
+        "prefix": "el-popover",
+        "body": [
+            "<el-popover",
+            "\t:title=\"$1\"",
+            "\t:content=\"$2\"",
+            "\ttrigger=\"${3:hover|click|focus|manual}\"",
+            "\tplacement=\"{$4:top|bottom|left|right}\"",
+            "\twidth=\"${5:200}\"",
+            ">",
+            "\t<span slot=\"reference\">",
+            "\t\t$0",
+            "\t</span>",
+            "</el-popover>"
+        ],
+        "description": "el气泡"
+    },
+    "el-popconfirm": {
+        "prefix": "el-popconfirm",
+        "body": [
+            "<el-popconfirm",
+            "\t:title=\"$1\"",
+            ">",
+            "\t<el-button slot=\"reference\">$0</el-button>",
+            "</el-popconfirm>"
+        ],
+        "description": "el气泡确认"
+    },
+    "el-image": {
+        "prefix": "el-image",
+        "body": [
+            "<el-image",
+            "\t:src=\"$1\"",
+            "\t:fit=\"${2:container|fill|cover|none|scale-down}\"",
+            "\t:preview-src-list=\"${3:[]}\"",
+            "\t:lazy=\"false\"",
+            "/>"
+        ],
+        "description": "el图片"
     }
 }
