@@ -14,7 +14,7 @@
 
 `t-`开头
 
-![](img/WX20201102-145329.png)
+![image](https://github.com/ywzhou123/th-vue-snippets/blob/master/img/WX20201102-145329.png)
 
 | 快捷键 | 生成内容 |
 | ------ | ------------ |
@@ -28,7 +28,7 @@
 
 `th-`开头
 
-![](img/WX20201102-145014.png)
+![image](https://github.com/ywzhou123/th-vue-snippets/blob/master/img/WX20201102-145014.png)
 
 
 | 快捷键 | 生成内容 |
@@ -57,7 +57,7 @@
 
 `u-`开头
 
-![](img/WX20201102-145122.png)
+![image](https://github.com/ywzhou123/th-vue-snippets/blob/master/img/WX20201102-145122.png)
 
 
 | 快捷键 | 生成内容 |
@@ -99,7 +99,7 @@
 
 `r-`开头
 
-![](img/WX20201102-145144.png)
+![image](https://github.com/ywzhou123/th-vue-snippets/blob/master/img/WX20201102-145144.png)
 
 | 快捷键 | 生成内容 |
 | ------ | ------------ |
@@ -147,7 +147,7 @@
 
 `s-`开头
 
-![](img/WX20201102-145448.png)
+![image](https://github.com/ywzhou123/th-vue-snippets/blob/master/img/WX20201102-145448.png)
 
 
 | 快捷键 | 生成内容 |
@@ -161,7 +161,7 @@
 
 `m-`开头
 
-![](img/WX20201102-145209.png)
+![image](https://github.com/ywzhou123/th-vue-snippets/blob/master/img/WX20201102-145209.png)
 
 
 | 快捷键 | 生成内容 |
@@ -177,7 +177,7 @@
 
 `d-`开头
 
-![](img/WX20201102-145503.png)
+![image](https://github.com/ywzhou123/th-vue-snippets/blob/master/img/WX20201102-145503.png)
 
 | 快捷键 | 生成内容 |
 | ------ | ------------ |
@@ -193,7 +193,7 @@
 
 `v-`开头
 
-![](img/WX20201102-145527.png)
+![image](https://github.com/ywzhou123/th-vue-snippets/blob/master/img/WX20201102-145527.png)
 
 | 快捷键 | 生成内容 |
 | ------ | ------------ |
@@ -204,7 +204,7 @@
 
 `h-`开头
 
-![](img/WX20201102-145541.png)
+![image](https://github.com/ywzhou123/th-vue-snippets/blob/master/img/WX20201102-145541.png)
 
 | 快捷键 | 生成内容 |
 | ------ | ------------ |
@@ -218,7 +218,7 @@
 
 `x-`开头
 
-![](img/WX20201102-145345.png)
+![image](https://github.com/ywzhou123/th-vue-snippets/blob/master/img/WX20201102-145345.png)
 
 | 快捷键 | 生成内容 |
 | ------ | ------------ |
@@ -234,7 +234,7 @@
 
 `el-`开头
 
-![](img/WX20201102-150534.png)
+![image](https://github.com/ywzhou123/th-vue-snippets/blob/master/img/WX20201102-150534.png)
 
 
 | 快捷键 | 生成内容 |

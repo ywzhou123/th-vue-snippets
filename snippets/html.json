@@ -257,7 +257,7 @@
     "el-button": {
         "prefix": "el-button",
         "body": [
-            "<el-button v-model=\"$1\" type=\"${2:primary|success|info|warning|danger}\" size=\"${3:medium|small|mini}\">",
+            "<el-button type=\"${1|primary,success,info,warning,danger|}\" size=\"${2|medium,small,mini|}\">",
             "\t$0",
             "</el-button>"
         ],
@@ -266,7 +266,7 @@
     "el-link": {
         "prefix": "el-link",
         "body": [
-            "<el-link :underline=\"false\" type=\"${1:primary|success|info|warning|danger}\" @click=\"$2\">",
+            "<el-link :underline=\"false\" type=\"${1|primary,success,info,warning,danger|}\" @click=\"$2\">",
             "\t$0",
             "</el-link>"
         ],
@@ -297,7 +297,7 @@
     "el-input": {
         "prefix": "el-input",
         "body": [
-            "<el-input v-model=\"$1\" size=\"${2:medium|small|mini}\" placeholder=\"请输入\" clearable />"
+            "<el-input v-model=\"$1\" size=\"${2|medium,small,mini|}\" placeholder=\"请输入\" clearable />"
         ],
         "description": "el输入框"
     },
@@ -311,7 +311,7 @@
     "el-number": {
         "prefix": "el-number",
         "body": [
-            "<el-input-number v-model=\"$1\" size=\"${2:small|large}\" :min=\"1\" :max=\"99\" />"
+            "<el-input-number v-model=\"$1\" size=\"${2|small,large|}\" :min=\"1\" :max=\"99\" />"
         ],
         "description": "el数字输入框"
     },
@@ -370,7 +370,7 @@
         "body": [
             "<el-date-picker",
             "\tv-model=\"$1\"",
-            "\ttype=\"${2:datetime|year|month|date|week|datetimerange|daterange}\"",
+            "\ttype=\"${2|datetime,year,month,date,week,datetimerange,daterange|}\"",
             "valueFormat=\"yyyy-MM-dd HH:mm:ss\"",
             "\tplaceholder=\"选择日期\"",
             "\trangeSeparator=\"至\"",
@@ -427,8 +427,8 @@
         "body": [
             "<el-tooltip",
             "\t:content=\"$1\"",
-            "\teffect=\"${2:dark|light}\"",
-            "\tplacement=\"{$3:top|bottom|left|right}\"",
+            "\teffect=\"${2|dark,light|}\"",
+            "\tplacement=\"${3|top,bottom,left,right|}\"",
             ">",
             "\t$0",
             "</el-tooltip>"
@@ -441,8 +441,8 @@
             "<el-popover",
             "\t:title=\"$1\"",
             "\t:content=\"$2\"",
-            "\ttrigger=\"${3:hover|click|focus|manual}\"",
-            "\tplacement=\"{$4:top|bottom|left|right}\"",
+            "\ttrigger=\"${3|hover,click,focus,manual|}\"",
+            "\tplacement=\"${4|top,bottom,left,right|}\"",
             "\twidth=\"${5:200}\"",
             ">",
             "\t<span slot=\"reference\">",
@@ -468,7 +468,7 @@
         "body": [
             "<el-image",
             "\t:src=\"$1\"",
-            "\t:fit=\"${2:container|fill|cover|none|scale-down}\"",
+            "\t:fit=\"${2|container,fill,cover,none,scale-down|}\"",
             "\t:preview-src-list=\"${3:[]}\"",
             "\t:lazy=\"false\"",
             "/>"
